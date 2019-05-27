@@ -1,0 +1,199 @@
+﻿<header class='header_style1'>
+	<div class='container'>
+		<div class='inner'>
+			<div class='header_part1 clearfix'>
+				<div class='right_part'>
+					<a href='' title='' class='logo'></a>
+				</div><!--close .right_part-->
+				<div class='center_part'>
+					<ul class='step clearfix none_list_style'>
+						<li class='item'><a href='' title='' class='link'>صفحه اصلی</a></li>
+						<li class='item have_menu'>
+							<a href='/خرید بلیط/products' title='' class='link'>خرید بلیط</a>
+							<div class='sub_style1'>
+								<ul class='step2 none_list_style'>
+									<li class='item2'>
+										<a href='/سینما/products/category/13'
+										   class='link2'>سینما</a>
+									</li>
+									<li class='item2'>
+										<a href='/تئاتر/products/category/7'
+										   class='link2'>تئاتر</a>
+									</li>
+
+							</div>
+						</li>
+						<li class='item'><a href='/پیگیری خرید/news' title='' class='link'>پیگیری خرید</a></li>
+						<li class='item'><a href='/اخبار/news' title='' class='link'>اخبار</a></li>
+						<li class='item'><a href='/کانون ها/article' title='' class='link'>دوره و کارگاه های آموزشی</a></li>
+						<li class='item'><a href='/تماس-با-ما/contact-us' title='' class='link'>تماس با ما</a></li>
+					</ul>
+				</div><!--close .center_part-->
+				<div class='left_part'>
+					<ul class='step none_list_style'>
+						@{
+							if (User.Identity.IsAuthenticated)
+							{
+								<li class='item have_tooltip'>
+									<a href='/cart' class='link' title=''>
+										<i class='i-shop'></i>
+										<div class='tooltip_style1'><span>سبد خرید</span></div>
+									</a>
+								</li>
+
+								<li class="item have_tooltip">
+									<a href="/user/profile" class="link" title="">
+										<i class="i-avatar"></i>
+										<div style="display: none; opacity: 1;" class="tooltip_style1"><span>پروفایل من</span></div>
+									</a>
+								</li>
+								<li class="item have_tooltip">
+									<a href="/logout" class="link" title="">
+										<i class="i-power-1"></i>
+										<div style="display: none; opacity: 1;" class="tooltip_style1"><span>خروج</span></div>
+									</a>
+								</li>
+							}
+							else
+							{
+								<li class="item have_tooltip">
+									<a href="/login" class="link" title="">
+										<i class="i-add-user"></i>
+										<div class="tooltip_style1" style="display: none;"><span>ورود / عضویت</span></div>
+									</a>
+								</li>
+							}
+						}
+					</ul>
+				</div><!--close .left_part-->
+			</div><!--close .header_part1-->
+			<div class='header_part2'>
+				<div class='text_part'>
+					<!--<div class='sub_title'>فروشگاه لوازم آشپزخانه</div>-->
+					<!-- <div class='title'>کی کِت</div>-->
+					<!--<img src='assets/front/_images/logo/logo_text.png' alt=''>-->
+				</div>	<!--close .text_part-->
+			</div> <!--close .header_part2-->
+		</div><!--close .inner-->
+	</div><!--close .container-->
+	<div class='header_part3'>
+		<div class='part_position'>
+			<div class='container'>
+				<div class='inner'>
+					<div class='wrapper clearfix'>
+						<a href='' title='' class='logo_part'></a>
+						<div class='search_part'>
+							<form method="POST" action="/search/query">
+								<input type="hidden" name="_token" value="KubHdUwJNAhD3EiMO7ancz5OGMtQTMwekpJlr53n">
+								<button class='search_btn'><i class='i-search'></i></button>
+
+								<input type='text' name="query" placeholder='عبارت مورد نظر خود را جستجو کنید...'>
+							</form>
+						</div><!--close .search_part-->
+					</div><!--close .wrapper-->
+				</div><!--close .inner-->
+			</div><!--close .container-->
+		</div><!--close .part_poition-->
+	</div><!--close .header_part3-->
+	<div class='responsive_menu'>
+		<div class='close_bg'></div>
+		<div class='wrapper'>
+			<div class='close_btn'><i class='i-cancel'></i></div>
+			<div class='top_part'>
+				<a href='' title='' class='logo'>
+					<span>فروشگاه لوازم آشپزخانه کی کِت</span>
+				</a>
+			</div><!-- close .top_part -->
+			<div class='middle_part'>
+				<ul class='step clearfix none_list_style'>
+					<li class='item'>
+						<a href='/login' class='link' title=''>
+							<i class='i-add-user'></i><span>ورود / عضویت</span>
+						</a>
+					</li>
+					<li class='item'>
+						<a href='/cart' class='link' title=''>
+							<i class='i-shop'></i><span>سبد خرید</span>
+						</a>
+					</li>
+
+
+					<li class="item">
+						<a href="/user/profile" class="link" title="">
+							<i class="i-avatar"></i>
+							<span>پروفایل من</span>
+						</a>
+					</li>
+					<li class="item">
+						<a href="/logout" class="link" title="">
+							<i class="i-power-1"></i>
+							<span>خروج</span>
+						</a>
+					</li>
+				</ul>
+			</div><!-- close .middle_part -->
+
+
+
+
+			<div class='bottom_part'>
+				<div class='have_scroll_y'>
+					<ul class='step none_list_style'>
+						<li class='item'>
+							<a href='' title='' class='link'>صفحه اصلی</a>
+						</li>
+						<li class='item have_menu'>
+							<a href='/محصولات/products' title='' class='link'>محصولات</a>
+							<div class='sub_style2'>
+								<ul class='step2 none_list_style'>
+									<li class='item2'>
+										<a href='/ماکروویو/products/category/13'
+										   class='link2'>ماکروویو</a>
+									</li>
+									<li class='item2'>
+										<a href='/قهوه-ساز/products/category/7'
+										   class='link2'>قهوه ساز</a>
+									</li>
+									<li class='item2'>
+										<a href='/اجاق-گاز-و-فر/products/category/12'
+										   class='link2'>اجاق گاز و فر</a>
+									</li>
+									<li class='item2'>
+										<a href='/سینک-ظرفشویی/products/category/6'
+										   class='link2'>سینک ظرفشویی</a>
+									</li>
+									<li class='item2'>
+										<a href='/هود/products/category/1'
+										   class='link2'>هود</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class='item'>
+							<a href='/اخبار/news' title='' class='link'>اخبار</a>
+						</li>
+						<li class='item'><a href='/مقالات/article' title='' class='link'>مقالات</a></li>
+						<li class='item'>
+							<a href='/درباره-ما/about-us' title='' class='link'>
+								درباره
+								ما
+							</a>
+						</li>
+						<li class='item'>
+							<a href='/تماس-با-ما/contact-us' title='' class='link'>
+								تماس
+								با ما
+							</a>
+						</li>
+						<li class='item'>
+							<a href='/قوانین-و-سیاست-ها/law' title='' class='link'>
+								قوانین
+								و سیاست ها
+							</a>
+						</li>
+					</ul>
+				</div><!-- close .have_scroll_y -->
+			</div><!-- close .bottom_part -->
+		</div><!-- close .wrapper -->
+	</div><!-- close .responsive_menu -->
+</header>

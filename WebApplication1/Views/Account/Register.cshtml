@@ -1,0 +1,136 @@
+﻿@model RegisterViewModel
+
+@await Html.PartialAsync("P_header")
+<div class='page_title'>
+	<div class='container'>
+		<div class='inner'>
+			<div class='title'></div>
+			<div id='breadcromb'>
+				<ul class='list clearfix none_list_style'>
+					<li><a href='http://kiket.ir' title=''><i class='i-home-house-streamline'></i></a></li>
+					<li><a href='http://kiket.ir/register' title=''>ورود یا ثبت نام</a></li>
+				</ul><!--close .list-->
+			</div><!--close #breadcrumb-->
+			<div class='search_part'>
+				<div class='search_btn'>
+					<i class='open_icon i-search'></i>
+					<i class='close_icon i-cancel'></i>
+				</div>
+				<div class='search_input'>
+					<form method="POST" action="http://kiket.ir/search/query">
+						<input type="hidden" name="_token" value="dsIvqII2PJDqUl2f2CzMupXHJ2TfV59ozigxe4jM">
+						<input name="query" type='text' placeholder='جستجو کنید'>
+						<button><i class='i-search'></i></button>
+					</form>
+				</div><!--close .search_input-->
+			</div><!--close .search_part-->
+		</div><!--close .inner-->
+	</div><!--close .container-->
+</div><!--close .page_title-->
+<div class='register_part1'>
+	<div class='container'>
+		<div class='inner clearfix'>
+			<div class='login_part fright'>
+				<div class='part_inner'>
+					<div class='title_style7'>
+						<div class='title'>ورود به پنل کاربری</div>
+					</div>
+					<div class='form_style2'>
+						<form id='frm_login' method="POST" action="http://kiket.ir/login">
+							<input type="hidden" name="_token" value="dsIvqII2PJDqUl2f2CzMupXHJ2TfV59ozigxe4jM">
+							<div class='alarm_style1' style='display:none;'>
+								<div class='success_alarm box'>
+									<div class='alarm_icon'><img src='_images/icon/checked.png' alt=''></div>
+									<div class='alarm_text'>مشخصات شما با موفقیت ثبت شد.</div>
+								</div>
+								<div class='error_alarm box' style='display:none;'>
+									<div class='alarm_icon'><img src='_images/icon/cancel.png' alt=''></div>
+									<div class='alarm_text'>مشخصات شما ثبت نشد!</div>
+								</div>
+							</div><!--close .alarm_style1-->
+							<ul class='step none_list_style clearfix'>
+								<li class='item'>
+									<div class='icon'><i class='i-mail'></i></div>
+									<input type='text' value="" placeholder='ایمیل یا نام کاربری' name='email'>
+									<span class='focus_bg'></span>
+									<span class='important'><i class='i-star'></i></span>
+								</li>
+								<li class='item'>
+									<div class='icon'><i class='i-key'></i></div>
+									<input type='password' id="password" placeholder='کلمه عبور' name='password'>
+									<span class='focus_bg'></span>
+									<span class='important'><i class='i-star'></i></span>
+								</li>
+								<li class='item submit'>
+									<button>ورود</button>
+								</li>
+							</ul>
+						</form>
+					</div>
+				</div><!-- close .part_inner -->
+			</div><!-- close .login_part -->
+			<div class='signin_part fleft'>
+				<div class='part_inner'>
+					<div class='title_style7'>
+						<div class='title'>عضویت در کی کِت</div>
+					</div>
+					<div class='form_style2'>
+						<form id='frm_register' method="POST" action="http://kiket.ir/register">
+							<input type="hidden" name="_token" value="dsIvqII2PJDqUl2f2CzMupXHJ2TfV59ozigxe4jM">
+							<div class='alarm_style1' style='display:none;'>
+								<div class='success_alarm box'>
+									<div class='alarm_icon'><img src='_images/icon/checked.png' alt=''></div>
+									<div class='alarm_text'>مشخصات شما با موفقیت ثبت شد.</div>
+								</div>
+								<div class='error_alarm box' style='display:none;'>
+									<div class='alarm_icon'><img src='_images/icon/cancel.png' alt=''></div>
+									<div class='alarm_text'>مشخصات شما ثبت نشد!</div>
+								</div>
+							</div><!--close .alarm_style1-->
+							<ul class='step none_list_style clearfix'>
+								<li class='item'>
+									<div class='icon'><i class='i-user'></i></div>
+									<input type='text' value="" placeholder='نام و نام خانوادگی' name='name'>
+									<span class='focus_bg'></span>
+									<span class='important'><i class='i-star'></i></span>
+								</li>
+								<li class='item'>
+									<div class='icon'><i class='i-mail'></i></div>
+									<input type='email' value="" placeholder='ایمیل' name='email'>
+									<span class='focus_bg'></span>
+									<span class='important'><i class='i-star'></i></span>
+								</li>
+								<li class='item'>
+									<div class='icon'><i class='i-mobile'></i></div>
+									<input type='text' value="" placeholder='شماره تماس' name='mobile'>
+									<span class='focus_bg'></span>
+									<span class='important'><i class='i-star'></i></span>
+								</li>
+								<li class='item'>
+									<div class='icon'><i class='i-key'></i></div>
+									<input type='password' placeholder='کلمه عبور' name='password'>
+									<span class='focus_bg'></span>
+									<span class='important'><i class='i-star'></i></span>
+								</li>
+								<li class='item'>
+									<div class='icon'><i class='i-key'></i></div>
+									<input type='password' placeholder='تکرار کلمه عبور' name='password_confirmation'>
+									<span class='focus_bg'></span>
+									<span class='important'><i class='i-star'></i></span>
+								</li>
+								<li class='item submit'>
+									<button>عضویت</button>
+								</li>
+							</ul>
+						</form>
+					</div>
+				</div><!-- close .part_inner -->
+			</div><!-- close .signin_part -->
+		</div><!-- close .inner -->
+	</div><!-- close .continer -->
+</div><!-- close .register_part1 -->
+
+
+@section Scripts {
+	@await Html.PartialAsync("_ValidationScriptsPartial")
+}
